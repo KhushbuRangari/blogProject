@@ -1,0 +1,24 @@
+<div class="author">
+ <h1 class="author_heading">Hi, I am Khushbu.</h1>
+ <p class="author_body">Web Developer and content Creator</p>
+</div>
+
+<img src="https://www.freeiconspng.com/uploads/3d-man-writing-png-10.png" alt="">
+<section class="articles">
+    <h2 class="article_heading">Latest Posts</h2>
+    <ul>
+
+        <% data.forEach(post => { %>
+            
+     
+     <li>
+        <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="article-list_date"><%= post.createdAt.toDateString() %></span>
+        </a>
+     </li>
+  <%  }); %>
+
+    </ul>
+    <a href="#" class="pagingation"></a>
+</section>
